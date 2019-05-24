@@ -542,7 +542,7 @@
             $('#reporte').DataTable(
                 // "serverSide": true,
                 // "ajax": "{{ url('api/reporte') }}"
-            );
+            );dfdf
         } );
     </script>
 </html>
