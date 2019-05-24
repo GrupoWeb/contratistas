@@ -14,3 +14,17 @@
 Route::get('/', function () {
     return view('index');
 });
+
+
+
+Route::get('reporte', function () {
+
+    // return datatables()
+	// 	->eloquent(App\User::query())
+	// 	->addColumn('btn', 'actions')
+	// 	->rawColumns(['btn'])
+    //     ->toJson();
+        
+    $respuesta = DB::select("exec ViewReport;");
+    return $respuesta;
+});
