@@ -21,7 +21,11 @@ Route::get('reporte', function () {
 	// 	->addColumn('btn', 'actions')
 	// 	->rawColumns(['btn'])
     //     ->toJson();
-    return datatables()->query(DB::select("exec ViewReport;"))->toJson();
+    
+    //return datatables()->query(DB::select("exec ViewReport"))->toJson();
+    
+    return datatables()->of(DB::select('exec ViewReport'))->toJson();
+    
     // $respuesta = DB::select("exec ViewReport;");
     // return $respuesta;
 });
